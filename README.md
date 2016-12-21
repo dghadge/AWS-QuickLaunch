@@ -23,6 +23,12 @@
      
 ###  Project launch
      On command prompt run : ./miniprojLaunch.sh 
-     
 
-     
+###  Testing Setup
+     1. Add ip output from the previous command to  ~/.ssh/config so that it looks like this :
+     Host xxx.xxx.xxx.xx
+ 	User ec2-user
+ 	IdentityFile ~/.aws/myprivatekey
+
+###  Testing launch
+     On command prompt run : ./miniprojTest.sh 
