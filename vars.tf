@@ -1,5 +1,11 @@
 data "aws_availability_zones" "available" {}
 
+variable "access_key" {
+}
+
+variable "secret_key" {
+}
+
 variable "VPC_CIDR" {
   default = "172.98.67.0/27"
 }
@@ -8,8 +14,7 @@ variable "SUBNET_CIDR" {
   default = "172.98.67.0/28"
 }
 
-variable "PATH_TO_PUBLIC_KEY" {
-  default = "awsterraformkey.pub"
+variable "public_key" {
 }
 
 variable "AWS_REGION" {

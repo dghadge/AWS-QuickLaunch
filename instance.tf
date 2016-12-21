@@ -9,7 +9,7 @@ resource "aws_instance" "miniproj-instance" {
   vpc_security_group_ids = ["${aws_security_group.allow-http.id}"]
 
   # the public SSH key
-  key_name = "${aws_key_pair.mykeypair.key_name}"
+  key_name = "${aws_key_pair.miniproj-kp.key_name}"
  
   #instance initiation scripts
   user_data = "${data.template_cloudinit_config.cloudinit.rendered}"

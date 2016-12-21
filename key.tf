@@ -1,4 +1,4 @@
-resource "aws_key_pair" "mykeypair" {
-  key_name = "awsterraformkey"
-  public_key = "${file("${var.PATH_TO_PUBLIC_KEY}")}"
+resource "aws_key_pair" "miniproj-kp" {
+  key_name = "${var.public_key}"
+  public_key = "${file("${var.public_key}")}"
 }
