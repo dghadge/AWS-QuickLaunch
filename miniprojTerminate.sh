@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ -z $TF_VAR_access_key ]; then
+    echo "Please export AWS acess key in variable TF_VAR_access_key"
+    exit 1 
+fi
+
+if [ -z $TF_VAR_secret_key ]; then
+    echo "Please export AWS secret key in variable TF_VAR_secret_key"
+    exit 1 
+fi
+
+if [ ! -e "$TF_VAR_public_key" ]; then
+    echo "Please export AWS public key in variable TF_VAR_public_key"
+    echo "Also copy AWS public key in this directory"
+    exit 1 
+fi
+
+##save the changes before apply
+terraform plan -out out.terraform
+
+if [ $? == 0 ] ; then 
+##apply changes if and only if you agree
+while true; do
+    echo "You're about to delete resources created for this project"
+    read -p "Do you wish to continue [Y/N] ?" yn
+    case $yn in
+        [Yy]* ) terraform destroy out.terraform; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer Y or N";;
+    esac
+done
+else 
+    echo "Aborting; please fix above errors"
+fi
