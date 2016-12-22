@@ -16,16 +16,13 @@ if [ ! -e "$TF_VAR_public_key" ]; then
     exit 1 
 fi
 
-##save the changes before apply
-terraform plan -out out.terraform
-
 if [ $? == 0 ] ; then 
 ##apply changes if and only if you agree
 while true; do
     echo "You're about to delete resources created for this project"
     read -p "Do you wish to continue [Y/N] ?" yn
     case $yn in
-        [Yy]* ) terraform destroy out.terraform; break;;
+        [Yy]* ) terraform destroy ; break;;
         [Nn]* ) exit;;
         * ) echo "Please answer Y or N";;
     esac
