@@ -36,3 +36,6 @@
 
 ###  Testing launch
      On command prompt run : ./miniprojTest.sh 
+
+###  Terminate AWS resources created for this project
+     On command prompt run : ./miniprojTerminate.sh 
