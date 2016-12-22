@@ -16,9 +16,9 @@
  
 ###  Project Setup 
      1. Download and install Terraform :   https://www.terraform.io/downloads.html
-     2. Add the terraform install directory to your PATH.  example : export PATH=/home/vagrant:$PATH
+     2. Add terraform install directory to your PATH.  example : export PATH=/home/vagrant:$PATH
      3. Download code : git clone https://github.com/dghadge/mini-project.git
-     4. Export user specific AWS keys This user must have admin access to all resources
+     4. Export user specific AWS keys. This user must have admin privileges to all resources
           export TF_VAR_access_key=your-aws-access-key-here
           export TF_VAR_secret_key=your-aws-secret-key-here
           export TF_VAR_public_key=your-aws-public-key-here        
