@@ -14,3 +14,7 @@ resource "aws_instance" "miniproj-instance" {
   #instance initiation scripts
   user_data = "${data.template_cloudinit_config.cloudinit.rendered}"
 }
+
+output "IP" {
+    value = "${aws_instance.miniproj-instance.public_ip}"
+}
