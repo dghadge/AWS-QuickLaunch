@@ -29,7 +29,7 @@
 ###  Testing Setup
      1. Download and install Serverspec 
           sudo gem install serverspec (Documentation : http://serverspec.org )
-     2. Add ip output from the previous command to  ~/.ssh/config so that it looks like this :
+     2. Add ip output from the project lauch command to  ~/.ssh/config so that it looks like this :
           Host xxx.xxx.xxx.xxx 
           User ec2-user
           IdentityFile /path-to-/your-aws-private-key
