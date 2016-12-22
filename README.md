@@ -28,7 +28,7 @@
      Add ip output from the previous command to  ~/.ssh/config so that it looks like this :
           Host xxx.xxx.xxx.xxx 
           User ec2-user
-          IdentityFile ~/.aws/myprivatekey
+          IdentityFile ~/.aws/your-aws-private-key
 
 ###  Testing launch
      On command prompt run : ./miniprojTest.sh 
