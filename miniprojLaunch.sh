@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##get the latest infrastructure state. Using s3 for repository versioning
-terraform remote config -backend=s3 -backend-config="bucket=tf-aws-automation-infra-states-repo" -backend-config="key=terraform.tfstate" -backend-config="region=us-east-1"
+#terraform remote config -backend=s3 -backend-config="bucket=tf-aws-automation-infra-states-repo" -backend-config="key=terraform.tfstate" -backend-config="region=us-east-1"
 
 if [ -z $TF_VAR_access_key ]; then
     echo "Please export AWS acess key in variable TF_VAR_access_key"
