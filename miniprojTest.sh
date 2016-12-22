@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf spec; rm Rakefile
+
 instance_ip=`terraform output IP`
 
 echo $instance_ip
