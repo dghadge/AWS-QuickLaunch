@@ -1,5 +1,10 @@
 ###  A mini project to create AWS infrastructure and launch a http server
 
+###  Description
+     This project uses Hashicorp's terraform tool to create AWS resources. 
+     It uses cloud-config/cloud-init to install and start httpd services on the AWS instance. 
+     Also it uses serverspec tool to ensure httpd is installed, started and displays a specific string.
+
 ###  Technical Components
      Host Machine      : Unix (must have packages : expect, rake)
      Cloud Provider    : AWS
