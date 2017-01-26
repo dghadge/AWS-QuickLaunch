@@ -1,4 +1,4 @@
-###  A mini project to create AWS infrastructure and launch a http server
+###  A starter project to quickly create AWS networking, infrastructure and httpd server
 
 ###  Description
      This project uses Hashicorp's terraform tool to create AWS resources. 
